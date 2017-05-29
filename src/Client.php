@@ -3,7 +3,6 @@ namespace Booli;
 
 use Booli\Http\Client as HttpClient;
 use Booli\Http\Authenticate;
-use Booli\Http\Middleware\History;
 
 /**
  * Booli API client.
