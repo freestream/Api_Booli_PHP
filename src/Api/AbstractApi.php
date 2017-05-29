@@ -59,5 +59,19 @@ abstract class AbstractApi
 
         return json_decode($response, true);
     }
+
+    /**
+     * GET resource method.
+     *
+     * @param  string $url
+     *
+     * @throws HttpTokenInvalidParamsException
+     *
+     * @return string
+     */
+    protected function _getResource($url)
+    {
+        return $this->client->getHttpClient()->execute($url);
+    }
 }
 

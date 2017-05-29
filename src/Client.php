@@ -75,6 +75,9 @@ class Client
             case 'areas':
                 $api = new \Booli\Api\Areas($this);
                 break;
+            case 'image':
+                $api = new \Booli\Api\Image($this);
+                break;
             default:
                 throw new \InvalidArgumentException(sprintf('Undefined API resource called: "%s"', $name));
         }
