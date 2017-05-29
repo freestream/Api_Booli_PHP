@@ -1,0 +1,29 @@
+{
+    "name": "freestream/api-booli",
+    "type": "library",
+    "description": "Booli API v2 client",
+    "homepage": "https://github.com/freestream/Api_Boolin",
+    "keywords": ["boolin", "gh", "api"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Anton Samuelsson",
+            "email": "samuelsson.anton@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^7.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~5.0"
+    },
+    "autoload": {
+        "psr-4": { "Booli\\": "src/" }
+    },
+    "autoload-dev": {
+        "psr-4": { "Booli\\Tests\\": "tests/" }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
+
