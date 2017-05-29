@@ -6,7 +6,7 @@ namespace Booli\Exception;
  *
  * @author Anton Samuelsson <samuelsson.anton@gmail.com>
  */
-class HttpBadResponseException implements \Exception
+class HttpBadResponseException extends \Exception
 {
     /**
      * The URL that was being connected to when the exception occurred.

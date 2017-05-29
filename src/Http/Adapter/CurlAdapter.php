@@ -35,6 +35,8 @@ class CurlAdapter implements AdapterInterface
         } else {
             throw new HttpCurlErrorException("Got CURL error code {$error}", $url, $error);
         }
+
+        return $response;
     }
 }
 

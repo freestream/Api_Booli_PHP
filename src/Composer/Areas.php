@@ -6,7 +6,7 @@ namespace Booli\Composer;
  *
  * @author Anton Samuelsson <samuelsson.anton@gmail.com>
  */
-class Areas
+class Areas extends AbstractComposer
 {
     /**
      * Default values.

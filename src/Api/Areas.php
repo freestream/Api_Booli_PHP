@@ -6,14 +6,14 @@ namespace Booli\Api;
  *
  * @author Anton Samuelsson <samuelsson.anton@gmail.com>
  */
-class Areas
+class Areas extends AbstractApi
 {
     /**
      * Base URL.
      *
      * @var string
      */
-    public $baseUrl = 'http://api.booli.se';
+    public $baseUrl = 'http://api.booli.se/areas';
 
     /**
      * Get all areas.
@@ -23,9 +23,10 @@ class Areas
      *
      * @return array
      */
-    public function all(\Booli\Composer\Areas $composer, $limit = null)
+    public function all(\Booli\Composer\Areas $composer = null, $limit = null)
     {
-        $filter = array_replace($composer->asArray(), [
+        $composer   = (null == $composer) ? [] : $composer->asArray();
+        $filter     = array_replace($composer, [
             'limit' => $limit,
         ]);
 

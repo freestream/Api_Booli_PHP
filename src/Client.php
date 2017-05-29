@@ -2,6 +2,7 @@
 namespace Booli;
 
 use Booli\Http\Client as HttpClient;
+use Booli\Http\Adapter\CurlAdapter;
 use Booli\Http\Authenticate;
 
 /**
@@ -26,13 +27,6 @@ class Client
     public $httpClient;
 
     /**
-     * Response history.
-     *
-     * @var \Booli\Http\Middleware\History;
-     */
-    private $responseHistory;
-
-    /**
      * Instal configuration.
      *
      * @param \Booli\Http\Authenticate $auth
@@ -40,9 +34,8 @@ class Client
      */
     public function __construct(Authenticate $auth, HttpClient $httpClient = null)
     {
-        $this->responseHistory  = new History();
-        $this->httpClient       = $httpClient ?: new HttpClient();
-        $this->auth             = $auth;
+        $this->httpClient   = $httpClient ?: new HttpClient(new CurlAdapter());
+        $this->auth         = $auth;
     }
 
     /**

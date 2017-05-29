@@ -2,63 +2,49 @@
 namespace Booli\Api;
 
 /**
- * Abstract API.
+ * Booli API for areas.
  *
  * @author Anton Samuelsson <samuelsson.anton@gmail.com>
  */
-abstract class AbstractApi
+class Sold extends AbstractApi
 {
     /**
-     * The client.
+     * Base URL.
      *
-     * @var \Booli\Client
+     * @var string
      */
-    protected $client;
+    public $baseUrl = 'http://api.booli.se/sold';
 
     /**
-     * Initial configuration.
+     * Get sold objects.
      *
-     * @param \Booli\Client $client
-     */
-    public function __construct(\Booli\Client $client)
-    {
-        $this->client = $client;
-    }
-
-    /**
-     * GET method.
-     *
-     * @param  string $baseUrl
-     * @param  array  $params
-     *
-     * @throws HttpTokenInvalidParamsException
+     * @param  \Booli\Composer\Sold $composer
+     * @param  integer              $limit
+     * @param  integer              $offset
      *
      * @return array
      */
-    protected function _get($baseUrl, array $params = [])
+    public function all(\Booli\Composer\Sold $composer = null, $limit = 100, $offset = 0)
     {
-        $auth       = $this->client->getAuthentication();
-        $response   = $this->client->getHttpClient()->get($url);
-
-        $time       = time();
-        $callerId   = $auth->getCallerId();
-        $key        = $auth->getKey();
-        $randomStr  = random_bytes(16);
-
-        $params = array_replace($params, [
-            'callerId'  => $callerId,
-            'time'      => $time,
-            'unique'    => $limit,
-            'hash'      => hash('sha1', $callerId . $time . $key . $randomStr),
+        $composer   = (null == $composer) ? [] : $composer->asArray();
+        $filter     = array_replace($composer, [
+            'limit'     => $limit,
+            'offset'    => $offset,
         ]);
 
-        $url = \Booli\Helper\Data::getUrl($baseUrl, $filter);
+        return $this->_get($this->baseUrl, $filter);
+    }
 
-        if (!$this->isJson($response)) {
-            throw new \UnexpectedValueException('Unexpected result');
-        }
-
-        return json_decode($response, true);
+    /**
+     * Get single sold object.
+     *
+     * @param  integer $id
+     *
+     * @return array
+     */
+    public function get($id)
+    {
+        return $this->_get($this->baseUrl . '/' . $id);
     }
 }
 

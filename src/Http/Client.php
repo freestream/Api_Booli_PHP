@@ -26,18 +26,6 @@ class Client
     }
 
     /**
-     * Execute request.
-     *
-     * @return string
-     */
-    public function execute($url)
-    {
-        $response = $this->httpAdapter->execute($url);
-
-        return $response;
-    }
-
-    /**
      * Get HTTP adapter.
      *
      * @return \Booli\Http\Adapter\AdapterInterface
@@ -45,6 +33,16 @@ class Client
     public function getAdapter()
     {
         return $this->httpAdapter;
+    }
+
+    /**
+     * Execute request.
+     *
+     * @return string
+     */
+    public function execute($url)
+    {
+        return $this->httpAdapter->execute($url);
     }
 }
 

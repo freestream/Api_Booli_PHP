@@ -6,14 +6,14 @@ namespace Booli\Api;
  *
  * @author Anton Samuelsson <samuelsson.anton@gmail.com>
  */
-class Listings
+class Listings extends AbstractApi
 {
     /**
      * Base URL.
      *
      * @var string
      */
-    public $baseUrl = 'http://api.booli.se';
+    public $baseUrl = 'http://api.booli.se/listings';
 
     /**
      * Get all listings.
@@ -24,9 +24,10 @@ class Listings
      *
      * @return array
      */
-    public function all(\Booli\Composer\Listings $composer, $limit = null, $offset = null)
+    public function all(\Booli\Composer\Listings $composer = null, $limit = 100, $offset = 0)
     {
-        $filter = array_replace($composer->asArray(), [
+        $composer   = (null == $composer) ? [] : $composer->asArray();
+        $filter     = array_replace($composer, [
             'limit'     => $limit,
             'offset'    => $offset,
         ]);
@@ -43,9 +44,7 @@ class Listings
      */
     public function get($id)
     {
-        $url = \Booli\Helper\Data::getUrl($this->baseUrl, $id);
-
-        return $this->_get($url);
+        return $this->_get($this->baseUrl . '/' . $id);
     }
 }
 

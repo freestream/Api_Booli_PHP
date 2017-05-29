@@ -16,11 +16,9 @@ class Data
      *
      * @return string
      */
-    public static function getUrl($baseUrl, $path = null, array $params = [])
+    public static function getUrl($baseUrl, array $params = [])
     {
-        $baseUrl = rtrim($baseUrl, '/') . '/' . trim($path, '/');
-
-        return sprintf('%s?%s', $baseUrl, $params);
+        return sprintf('%s?%s', rtrim($baseUrl, '/') . '/', http_build_query(array_filter($params, 'strlen'), '', '&'));
     }
 
     /**
@@ -30,10 +28,30 @@ class Data
      *
      * @return boolean
      */
-    public function isJson($string)
+    public static function isJson($string)
     {
         json_decode($string);
         return (json_last_error() == JSON_ERROR_NONE);
+    }
+
+    /**
+     * Get random string.
+     *
+     * @param  integer $length
+     *
+     * @return string
+     */
+    public static function randomStr($length = 16)
+    {
+        $length         = (int) $length;
+        $characters     = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        $randomString   = '';
+
+        for ($i = 0; $i < $length; $i++) {
+            $randomString .= $characters[rand(0, strlen($characters) - 1)];
+        }
+
+        return $randomString;
     }
 }
 

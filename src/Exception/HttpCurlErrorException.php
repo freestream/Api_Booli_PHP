@@ -6,7 +6,7 @@ namespace Booli\Exception;
  *
  * @author Anton Samuelsson <samuelsson.anton@gmail.com>
  */
-class HttpCurlErrorException implements \Exception
+class HttpCurlErrorException extends \Exception
 {
     /**
      * The URL that was being connected to when the exception occurred.

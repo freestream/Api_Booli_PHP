@@ -6,7 +6,7 @@ namespace Booli\Composer;
  *
  * @author Anton Samuelsson <samuelsson.anton@gmail.com>
  */
-class Sold
+class Sold extends AbstractComposer
 {
     /**
      * Default values.
