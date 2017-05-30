@@ -53,8 +53,8 @@ class Listings extends AbstractApi
      */
     public function all(\Booli\Composer\Listings $composer, $size = 100, $page = 0)
     {
-        if ((null !== $limit && !is_int($limit)) || (null !== $page && !is_int($page))) {
-            throw new \InvalidArgumentException('Limit and page have to be of type integer');
+        if ((null !== $page && !is_int($page)) || (null !== $page && !is_int($page))) {
+            throw new \InvalidArgumentException('Page and size have to be of type integer');
         }
 
         $page       = max(0, $page);
