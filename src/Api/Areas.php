@@ -50,6 +50,10 @@ class Areas extends AbstractApi
      */
     public function all(\Booli\Composer\Areas $composer = null, $limit = null)
     {
+        if (null !== $limit && !is_int($limit)) {
+            throw new \InvalidArgumentException('Limit have to be of type integer');
+        }
+
         $composer   = (null == $composer) ? [] : $composer->asArray();
         $filter     = array_replace($composer, [
             'limit' => $limit,

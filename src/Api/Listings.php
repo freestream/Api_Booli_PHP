@@ -51,6 +51,10 @@ class Listings extends AbstractApi
      */
     public function all(\Booli\Composer\Listings $composer = null, $limit = null, $offset = null)
     {
+        if ((null !== $limit && !is_int($limit)) || (null !== $offset && !is_int($offset))) {
+            throw new \InvalidArgumentException('Limit and offset have to be of type integer');
+        }
+
         $composer   = (null == $composer) ? [] : $composer->asArray();
         $filter     = array_replace($composer, [
             'limit'     => $limit,
