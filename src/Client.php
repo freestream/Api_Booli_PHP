@@ -57,7 +57,7 @@ class Client
      * @param \Booli\Http\Authenticate $auth
      * @param \Booli\Http\Client       $httpClient
      */
-    public function __construct(Authenticate $auth, HttpClient $httpClient = null)
+    public function __construct(Authenticate $auth = null, HttpClient $httpClient = null)
     {
         $this->httpClient   = $httpClient ?: new HttpClient(new CurlAdapter());
         $this->auth         = $auth;
