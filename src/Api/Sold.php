@@ -58,7 +58,7 @@ class Sold extends AbstractApi
         }
 
         $page       = max(0, $page);
-        $limit      = max(0, $limit);
+        $limit      = min(500, max(0, $limit));
 
         $composer   = (null == $composer) ? [] : $composer->asArray();
         $filter     = array_replace($composer, [
