@@ -53,6 +53,10 @@ class Image extends AbstractApi
      */
     public function get($booliId, $width = 140, $height = 94)
     {
+        if (!is_int($booliId)) {
+            throw new \InvalidArgumentException('Booli ID have to be of type integer');
+        }
+
         if ((null !== $width && !is_int($width)) || (null !== $height && !is_int($height))) {
             throw new \InvalidArgumentException('Width and height have to be of type integer');
         }
