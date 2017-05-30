@@ -47,6 +47,8 @@ class Listings extends AbstractApi
      * @param  integer                  $limit
      * @param  integer                  $offset
      *
+     * @throws InvalidArgumentException
+     *
      * @return array
      */
     public function all(\Booli\Composer\Listings $composer = null, $limit = null, $offset = null)

@@ -46,6 +46,8 @@ class Areas extends AbstractApi
      * @param  \Booli\Composer\Areas $composer
      * @param  integer               $limit
      *
+     * @throws InvalidArgumentException
+     *
      * @return array
      */
     public function all(\Booli\Composer\Areas $composer = null, $limit = null)
