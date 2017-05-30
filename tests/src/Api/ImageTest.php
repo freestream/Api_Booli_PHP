@@ -27,51 +27,56 @@
 namespace Booli\Tests\Api;
 
 use Booli\Client;
-use Booli\Http\Authenticate;
 
 /**
  * Booli API.
  *
  * @author Anton Samuelsson <samuelsson.anton@gmail.com>
  */
-abstract class AbstractTestCase extends \PHPUnit\Framework\TestCase
+class ImageTest extends AbstractTestCase
 {
+    /**
+     * @test
+     * @dataProvider getApiGetProvider
+     */
+    public function shouldGet($x, $y, $expected)
+    {
+        $api = $this->getApiMock();
+
+        $api->expects($this->once())
+            ->method('executeResource')
+            ->with($expected);
+
+        $api->get(1234, $x, $y);
+    }
+
+    /**
+     *  API class data provider.
+     *
+     * @return array
+     */
+    public function getApiGetProvider()
+    {
+        $api = $this->getApiMock();
+
+        return [
+            [null, null, $api->baseUrl . '/' . 'primary_1234_140x94.jpg'],
+            [100, 90, $api->baseUrl . '/' . 'primary_1234_100x90.jpg'],
+            [200, 200, $api->baseUrl . '/' . 'primary_1234_140x94.jpg'],
+            [null, 100, $api->baseUrl . '/' . 'primary_1234_140x94.jpg'],
+            [140, 100, $api->baseUrl . '/' . 'primary_1234_140x94.jpg'],
+            [200, null, $api->baseUrl . '/' . 'primary_1234_140x94.jpg'],
+        ];
+    }
+
     /**
      * API class.
      *
      * @return string
      */
-    abstract protected function getApiClass();
-
-    /**
-     * Mock API handler.
-     *
-     * @return \PHPUnit_Framework_MockObject_MockObject
-     */
-    protected function getApiMock()
+    protected function getApiClass()
     {
-        $auth   = new Authenticate('abc', '123');
-        $client = new Client($auth);
-
-        $adapter = $this->getMockBuilder(\Booli\Http\Adapter\CurlAdapter::class)
-            ->setMethods(['execute'])
-            ->getMock();
-
-        $httpClient = $this->getMockBuilder(\Booli\Http\Client::class)
-            ->setConstructorArgs([$adapter])
-            ->setMethods(['execute'])
-            ->getMock();
-
-        $httpClient
-            ->expects($this->any())
-            ->method('execute');
-
-        $client = new Client($auth, $httpClient);
-
-        return $this->getMockBuilder($this->getApiClass())
-            ->setMethods(['execute', 'executeResource'])
-            ->setConstructorArgs([$client])
-            ->getMock();
+        return \Booli\Api\Image::class;
     }
 }
 
