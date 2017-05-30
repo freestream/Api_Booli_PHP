@@ -27,6 +27,7 @@
 namespace Booli\Tests;
 
 use Booli\Client;
+use Booli\Http\Authenticate;
 use PHPUnit\Framework\TestCase;
 
 /**
@@ -42,7 +43,84 @@ class ClientTest extends TestCase
     public function shouldNotHaveToPassHttpClientToConstructor()
     {
         $client = new Client();
+
         $this->assertInstanceOf(\Booli\Http\Client::class, $client->getHttpClient());
+    }
+
+    /**
+     * @test
+     */
+    public function shouldAuthenticate()
+    {
+        $auth   = new Authenticate('abc', '123');
+        $client = new Client($auth);
+
+        $this->assertInstanceOf(\Booli\Http\Authenticate::class, $client->getAuthentication());
+    }
+
+    /**
+     * @test
+     * @expectedException \InvalidArgumentException
+     */
+    public function shouldThrowExceptionWhenAuthentionNotSet()
+    {
+        $client = new Client();
+        $client->getAuthentication();
+    }
+
+    /**
+     * @test
+     * @dataProvider getApiClassesProvider
+     */
+    public function shouldGetApiInstance($apiName, $class)
+    {
+        $client = new Client();
+        $this->assertInstanceOf($class, $client->api($apiName));
+    }
+
+    /**
+     * @test
+     * @dataProvider getApiClassesProvider
+     */
+    public function shouldGetMagicApiInstance($apiName, $class)
+    {
+        $client = new Client();
+        $this->assertInstanceOf($class, $client->$apiName());
+    }
+
+    /**
+     *  API class data provider.
+     *
+     * @return array
+     */
+    public function getApiClassesProvider()
+    {
+        return [
+            ['listings', \Booli\Api\Listings::class],
+            ['sold', \Booli\Api\Sold::class],
+            ['areas', \Booli\Api\Areas::class],
+            ['image', \Booli\Api\Image::class],
+        ];
+    }
+
+    /**
+     * @test
+     * @expectedException \InvalidArgumentException
+     */
+    public function shouldNotGetApiInstance()
+    {
+        $client = new Client();
+        $client->api('do_not_exist');
+    }
+
+    /**
+     * @test
+     * @expectedException \BadMethodCallException
+     */
+    public function shouldNotGetMagicApiInstance()
+    {
+        $client = new Client();
+        $client->doNotExist();
     }
 }
 
