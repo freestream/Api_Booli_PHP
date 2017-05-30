@@ -2,7 +2,7 @@
     "name": "freestream/api-booli",
     "type": "library",
     "description": "Booli API client",
-    "homepage": "git@github.com:freestream/Api_Booli_PHP.git",
+    "homepage": "https://github.com/freestream/Api_Booli_PHP",
     "keywords": ["boolin", "api"],
     "license": "MIT",
     "authors": [
