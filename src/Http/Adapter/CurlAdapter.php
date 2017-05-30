@@ -48,6 +48,7 @@ class CurlAdapter implements AdapterInterface
         curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
         curl_setopt($curl, CURLOPT_FAILONERROR, false);
         curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, 2);
+        curl_setopt($curl, CURLOPT_USERAGENT, 'booli-api-php');
 
         $response = curl_exec($curl);
 
