@@ -47,12 +47,21 @@ class Image extends AbstractApi
      * @param  integer $width
      * @param  integer $height
      *
+     * @throws InvalidArgumentException
+     *
      * @return array
      */
     public function get($booliId, $width = 140, $height = 94)
     {
-        $width  = max(140, min(0, $width));
-        $height = max(94, min(0, $height));
+        if ((null !== $width && !is_int($width)) || (null !== $height && !is_int($height))) {
+            throw new \InvalidArgumentException('Width and height have to be of type integer');
+        }
+
+        $width  = (null != $width) ? $width : 140;
+        $height = (null != $height) ? $height : 94;
+
+        $width  = min(140, max(0, $width));
+        $height = min(94, max(0, $height));
         $url    = $this->baseUrl . '/' . "primary_{$booliId}_{$width}x{$height}.jpg";
 
         return $this->executeResource($url);
