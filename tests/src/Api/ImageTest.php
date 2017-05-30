@@ -70,6 +70,26 @@ class ImageTest extends AbstractTestCase
     }
 
     /**
+     * @test
+     * @expectedException \InvalidArgumentException
+     */
+    public function shouldThrowExceptionWidthNonIntBooliId()
+    {
+        $api = $this->getApiMock();
+        $api->get("1234");
+    }
+
+    /**
+     * @test
+     * @expectedException \InvalidArgumentException
+     */
+    public function shouldThrowExceptionWidthNonIntParam()
+    {
+        $api = $this->getApiMock();
+        $api->get(1234, new \stdClass);
+    }
+
+    /**
      * API class.
      *
      * @return string

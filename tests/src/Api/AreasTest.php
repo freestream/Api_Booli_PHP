@@ -75,6 +75,18 @@ class AreasTest extends AbstractTestCase
     }
 
     /**
+     * @test
+     * @expectedException \InvalidArgumentException
+     */
+    public function shouldThrowExceptionWidthNonIntParam()
+    {
+        $composer = new Composer;
+
+        $api = $this->getApiMock();
+        $api->all($composer, new \stdClass);
+    }
+
+    /**
      * API class.
      *
      * @return string

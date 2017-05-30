@@ -77,6 +77,18 @@ class SoldTest extends AbstractTestCase
     }
 
     /**
+     * @test
+     * @expectedException \InvalidArgumentException
+     */
+    public function shouldThrowExceptionWidthNonIntParam()
+    {
+        $composer = new Composer;
+
+        $api = $this->getApiMock();
+        $api->all($composer, new \stdClass, new \stdClass);
+    }
+
+    /**
      * API class.
      *
      * @return string
