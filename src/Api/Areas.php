@@ -55,7 +55,7 @@ class Areas extends AbstractApi
             'limit' => $limit,
         ]);
 
-        return $this->_get($this->baseUrl, $filter);
+        return $this->execute($this->baseUrl, $filter);
     }
 }
 

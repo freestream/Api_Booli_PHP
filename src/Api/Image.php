@@ -55,7 +55,7 @@ class Image extends AbstractApi
         $height = max(94, min(0, $height));
         $url    = $this->baseUrl . '/' . "primary_{$booliId}_{$width}x{$height}.jpg";
 
-        return $this->_getResource($url);
+        return $this->executeResource($url);
     }
 }
 

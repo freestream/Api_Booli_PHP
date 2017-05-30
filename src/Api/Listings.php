@@ -49,7 +49,7 @@ class Listings extends AbstractApi
      *
      * @return array
      */
-    public function all(\Booli\Composer\Listings $composer = null, $limit = 100, $offset = 0)
+    public function all(\Booli\Composer\Listings $composer = null, $limit = null, $offset = null)
     {
         $composer   = (null == $composer) ? [] : $composer->asArray();
         $filter     = array_replace($composer, [
@@ -57,7 +57,7 @@ class Listings extends AbstractApi
             'offset'    => $offset,
         ]);
 
-        return $this->_get($this->baseUrl, $filter);
+        return $this->execute($this->baseUrl, $filter);
     }
 
     /**
@@ -69,7 +69,7 @@ class Listings extends AbstractApi
      */
     public function get($id)
     {
-        return $this->_get($this->baseUrl . '/' . $id);
+        return $this->execute($this->baseUrl . '/' . $id);
     }
 }
 
