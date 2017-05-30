@@ -60,7 +60,7 @@ abstract class AbstractApi
      *
      * @return array
      */
-    protected function _get($baseUrl, array $params = [])
+    public function execute($baseUrl, array $params = [])
     {
         $auth       = $this->client->getAuthentication();
         $time       = time();
@@ -94,7 +94,7 @@ abstract class AbstractApi
      *
      * @return string
      */
-    protected function _getResource($url)
+    public function executeResource($url)
     {
         return $this->client->getHttpClient()->execute($url);
     }
