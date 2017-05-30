@@ -45,22 +45,25 @@ class Listings extends AbstractApi
      *
      * @param  \Booli\Composer\Listings $composer
      * @param  integer                  $limit
-     * @param  integer                  $offset
+     * @param  integer                  $page
      *
      * @throws InvalidArgumentException
      *
      * @return array
      */
-    public function all(\Booli\Composer\Listings $composer = null, $limit = null, $offset = null)
+    public function all(\Booli\Composer\Listings $composer, $limit = 100, $page = 0)
     {
-        if ((null !== $limit && !is_int($limit)) || (null !== $offset && !is_int($offset))) {
-            throw new \InvalidArgumentException('Limit and offset have to be of type integer');
+        if ((null !== $limit && !is_int($limit)) || (null !== $page && !is_int($page))) {
+            throw new \InvalidArgumentException('Limit and page have to be of type integer');
         }
+
+        $page       = max(0, $page);
+        $limit      = max(0, $limit);
 
         $composer   = (null == $composer) ? [] : $composer->asArray();
         $filter     = array_replace($composer, [
             'limit'     => $limit,
-            'offset'    => $offset,
+            'offset'    => $page*$limit,
         ]);
 
         return $this->execute($this->baseUrl, $filter);

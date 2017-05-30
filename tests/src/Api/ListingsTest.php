@@ -43,8 +43,8 @@ class ListingsTest extends AbstractTestCase
     {
         $composer = new Composer;
         $expected = array_replace($composer->asArray(), [
-            'limit'     => null,
-            'offset'    => null,
+            'limit'     => 100,
+            'offset'    => 0,
         ]);
 
         $api = $this->getApiMock();
@@ -64,7 +64,7 @@ class ListingsTest extends AbstractTestCase
         $composer = new Composer;
         $expected = array_replace($composer->asArray(), [
             'limit'     => 200,
-            'offset'    => 2,
+            'offset'    => 200*2,
         ]);
 
         $api = $this->getApiMock();
