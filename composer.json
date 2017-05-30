@@ -3,7 +3,7 @@
     "type": "library",
     "description": "Booli API client",
     "homepage": "git@github.com:freestream/Api_Booli_PHP.git",
-    "keywords": ["boolin", "gh", "api"],
+    "keywords": ["boolin", "api"],
     "license": "MIT",
     "authors": [
         {
