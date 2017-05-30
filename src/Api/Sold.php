@@ -44,21 +44,21 @@ class Sold extends AbstractApi
      * Get sold objects.
      *
      * @param  \Booli\Composer\Sold $composer
-     * @param  integer              $limit
+     * @param  integer              $size
      * @param  integer              $page
      *
      * @throws InvalidArgumentException
      *
      * @return array
      */
-    public function all(\Booli\Composer\Sold $composer, $limit = 100, $page = 0)
+    public function all(\Booli\Composer\Sold $composer, $size = 100, $page = 0)
     {
         if ((null !== $limit && !is_int($limit)) || (null !== $page && !is_int($page))) {
             throw new \InvalidArgumentException('Limit and page have to be of type integer');
         }
 
         $page       = max(0, $page);
-        $limit      = min(500, max(0, $limit));
+        $limit      = min(500, max(0, $size));
 
         $composer   = (null == $composer) ? [] : $composer->asArray();
         $filter     = array_replace($composer, [
