@@ -78,6 +78,21 @@ class SoldTest extends AbstractTestCase
 
     /**
      * @test
+     */
+    public function shouldGetOne()
+    {
+        $id     = 123;
+        $api    = $this->getApiMock();
+
+        $api->expects($this->once())
+            ->method('execute')
+            ->with($api->baseUrl . '/' . $id);
+
+        $api->get($id);
+    }
+
+    /**
+     * @test
      * @expectedException \InvalidArgumentException
      */
     public function shouldThrowExceptionWidthNonIntParam()
