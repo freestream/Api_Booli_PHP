@@ -21,7 +21,10 @@ use Booli\Client;
 use Booli\Http\Authenticate;
 use Booli\Composer\Sold as Composer;
 
-$client = new Client(new Authenticate('abc', '123'));
+$callerId = 'abc';
+$key = '123';
+
+$client = new Client(new Authenticate($callerId, $key));
 
 $page = 0;
 $composer = new Composer();
