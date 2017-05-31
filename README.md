@@ -2,6 +2,8 @@
 
 A lightweight object oriented wrapper for [Booli API v2](https://www.booli.se/api/).
 
+[![Build Status](https://travis-ci.org/freestream/Api_Booli_PHP.svg?branch=master)](https://travis-ci.org/freestream/Api_Booli_PHP)
+
 ## Features
 
 * Follows PSR-4 conventions and coding standard: autoload friendly
