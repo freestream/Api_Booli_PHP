@@ -45,5 +45,20 @@ class ListingsTest extends TestCase
 
         $this->assertTrue(is_array($composer->asArray()));
     }
+
+    /**
+     * @test
+     */
+    public function shouldGetQuery()
+    {
+        $composer = new Composer();
+        $expected = array_replace($composer->asArray(), [
+            'q' => 'stockholm',
+        ]);
+
+        $composer->query('stockholm');
+
+        $this->assertEquals($composer->asArray(), $expected);
+    }
 }
 
