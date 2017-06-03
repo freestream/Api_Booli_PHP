@@ -145,7 +145,7 @@ class Sold extends AbstractComposer
     /**
      * Area IDs.
      *
-     * @param array|int $value;
+     * @param array|int $value
      *
      * @return \Booli\Composer\Sold
      */
@@ -159,7 +159,7 @@ class Sold extends AbstractComposer
     /**
      * Minimum listing price.
      *
-     * @param int $value;
+     * @param int $value
      *
      * @return \Booli\Composer\Sold
      */
@@ -173,7 +173,7 @@ class Sold extends AbstractComposer
     /**
      * Maximum listing price.
      *
-     * @param int $value;
+     * @param int $value
      *
      * @return \Booli\Composer\Sold
      */
@@ -187,7 +187,7 @@ class Sold extends AbstractComposer
     /**
      * Minimum price per square meter.
      *
-     * @param int $value;
+     * @param int $value
      *
      * @return \Booli\Composer\Sold
      */
@@ -201,7 +201,7 @@ class Sold extends AbstractComposer
     /**
      * Maximum price per square meter.
      *
-     * @param int $value;
+     * @param int $value
      *
      * @return \Booli\Composer\Sold
      */
@@ -215,7 +215,7 @@ class Sold extends AbstractComposer
     /**
      * Minimum amount of rooms.
      *
-     * @param int $value;
+     * @param int $value
      *
      * @return \Booli\Composer\Sold
      */
@@ -229,7 +229,7 @@ class Sold extends AbstractComposer
     /**
      * Maximum amount of rooms.
      *
-     * @param int $value;
+     * @param int $value
      *
      * @return \Booli\Composer\Sold
      */
@@ -243,7 +243,7 @@ class Sold extends AbstractComposer
     /**
      * Maximum rent.
      *
-     * @param int $value;
+     * @param int $value
      *
      * @return \Booli\Composer\Sold
      */
@@ -257,7 +257,7 @@ class Sold extends AbstractComposer
     /**
      * Minimum living area.
      *
-     * @param int $value;
+     * @param int $value
      *
      * @return \Booli\Composer\Sold
      */
@@ -271,7 +271,7 @@ class Sold extends AbstractComposer
     /**
      * Maximum living area.
      *
-     * @param int $value;
+     * @param int $value
      *
      * @return \Booli\Composer\Sold
      */
@@ -285,7 +285,7 @@ class Sold extends AbstractComposer
     /**
      * Minimum plot area.
      *
-     * @param int $value;
+     * @param int $value
      *
      * @return \Booli\Composer\Sold
      */
@@ -299,7 +299,7 @@ class Sold extends AbstractComposer
     /**
      * Maximum plot area.
      *
-     * @param int $value;
+     * @param int $value
      *
      * @return \Booli\Composer\Sold
      */
@@ -313,7 +313,7 @@ class Sold extends AbstractComposer
     /**
      * Property type.
      *
-     * @param string|array $value;
+     * @param string|array $value
      *
      * @return \Booli\Composer\Sold
      */
@@ -327,7 +327,7 @@ class Sold extends AbstractComposer
     /**
      * Minimum year of construction.
      *
-     * @param int $value;
+     * @param int $value
      *
      * @return \Booli\Composer\Sold
      */
@@ -341,7 +341,7 @@ class Sold extends AbstractComposer
     /**
      * Maximum year of construction.
      *
-     * @param int $value;
+     * @param int $value
      *
      * @return \Booli\Composer\Sold
      */
@@ -355,7 +355,7 @@ class Sold extends AbstractComposer
     /**
      * Earliest date the ad was published.
      *
-     * @param \DateTime $date;
+     * @param \DateTime $date
      *
      * @return \Booli\Composer\Sold
      */
@@ -369,7 +369,7 @@ class Sold extends AbstractComposer
     /**
      * The last date the object was published.
      *
-     * @param \DateTime $date;
+     * @param \DateTime $date
      *
      * @return \Booli\Composer\Sold
      */
@@ -383,7 +383,7 @@ class Sold extends AbstractComposer
     /**
      * Earliest date the object was sold.
      *
-     * @param \DateTime $date;
+     * @param \DateTime $date
      *
      * @return \Booli\Composer\Sold
      */
@@ -397,7 +397,7 @@ class Sold extends AbstractComposer
     /**
      * The last date the object was sold.
      *
-     * @param \DateTime $date;
+     * @param \DateTime $date
      *
      * @return \Booli\Composer\Sold
      */
@@ -411,7 +411,7 @@ class Sold extends AbstractComposer
     /**
      * Show only new production or exclude listings.
      *
-     * @param int|bool $value;
+     * @param int|bool $value
      *
      * @return \Booli\Composer\Sold
      */
@@ -425,7 +425,7 @@ class Sold extends AbstractComposer
     /**
      * Include listings with missing data attributes,.
      *
-     * @param int|bool $value;
+     * @param int|bool $value
      *
      * @return \Booli\Composer\Sold
      */

@@ -144,7 +144,7 @@ class Listings extends AbstractComposer
     /**
      * Area IDs.
      *
-     * @param array|int $value;
+     * @param array|int $value
      *
      * @return \Booli\Composer\Listings
      */
@@ -158,7 +158,7 @@ class Listings extends AbstractComposer
     /**
      * Minimum listing price.
      *
-     * @param int $value;
+     * @param int $value
      *
      * @return \Booli\Composer\Listings
      */
@@ -172,7 +172,7 @@ class Listings extends AbstractComposer
     /**
      * Maximum listing price.
      *
-     * @param int $value;
+     * @param int $value
      *
      * @return \Booli\Composer\Listings
      */
@@ -186,7 +186,7 @@ class Listings extends AbstractComposer
     /**
      * Minimum price per square meter.
      *
-     * @param int $value;
+     * @param int $value
      *
      * @return \Booli\Composer\Listings
      */
@@ -200,7 +200,7 @@ class Listings extends AbstractComposer
     /**
      * Maximum price per square meter.
      *
-     * @param int $value;
+     * @param int $value
      *
      * @return \Booli\Composer\Listings
      */
@@ -214,7 +214,7 @@ class Listings extends AbstractComposer
     /**
      * Minimum amount of rooms.
      *
-     * @param int $value;
+     * @param int $value
      *
      * @return \Booli\Composer\Listings
      */
@@ -228,7 +228,7 @@ class Listings extends AbstractComposer
     /**
      * Maximum amount of rooms.
      *
-     * @param int $value;
+     * @param int $value
      *
      * @return \Booli\Composer\Listings
      */
@@ -242,7 +242,7 @@ class Listings extends AbstractComposer
     /**
      * Maximum rent.
      *
-     * @param int $value;
+     * @param int $value
      *
      * @return \Booli\Composer\Listings
      */
@@ -256,7 +256,7 @@ class Listings extends AbstractComposer
     /**
      * Minimum living area.
      *
-     * @param int $value;
+     * @param int $value
      *
      * @return \Booli\Composer\Listings
      */
@@ -270,7 +270,7 @@ class Listings extends AbstractComposer
     /**
      * Maximum living area.
      *
-     * @param int $value;
+     * @param int $value
      *
      * @return \Booli\Composer\Listings
      */
@@ -284,7 +284,7 @@ class Listings extends AbstractComposer
     /**
      * Minimum plot area.
      *
-     * @param int $value;
+     * @param int $value
      *
      * @return \Booli\Composer\Listings
      */
@@ -298,7 +298,7 @@ class Listings extends AbstractComposer
     /**
      * Maximum plot area.
      *
-     * @param int $value;
+     * @param int $value
      *
      * @return \Booli\Composer\Listings
      */
@@ -312,7 +312,7 @@ class Listings extends AbstractComposer
     /**
      * Property type.
      *
-     * @param string|array $value;
+     * @param string|array $value
      *
      * @return \Booli\Composer\Listings
      */
@@ -326,7 +326,7 @@ class Listings extends AbstractComposer
     /**
      * Minimum year of construction.
      *
-     * @param int $value;
+     * @param int $value
      *
      * @return \Booli\Composer\Listings
      */
@@ -340,7 +340,7 @@ class Listings extends AbstractComposer
     /**
      * Maximum year of construction.
      *
-     * @param int $value;
+     * @param int $value
      *
      * @return \Booli\Composer\Listings
      */
@@ -354,7 +354,7 @@ class Listings extends AbstractComposer
     /**
      * Earliest date the object was published.
      *
-     * @param \DateTime $date;
+     * @param \DateTime $date
      *
      * @return \Booli\Composer\Listings
      */
@@ -368,7 +368,7 @@ class Listings extends AbstractComposer
     /**
      * The last date the object was published.
      *
-     * @param \DateTime $date;
+     * @param \DateTime $date
      *
      * @return \Booli\Composer\Listings
      */
@@ -382,7 +382,7 @@ class Listings extends AbstractComposer
     /**
      * Only listings with decreased price.
      *
-     * @param int $value;
+     * @param int $value
      *
      * @return \Booli\Composer\Listings
      */
@@ -396,7 +396,7 @@ class Listings extends AbstractComposer
     /**
      * Show only new production or exclude listings.
      *
-     * @param int $value;
+     * @param int $value
      *
      * @return \Booli\Composer\Listings
      */
@@ -410,7 +410,7 @@ class Listings extends AbstractComposer
     /**
      * Include listings with missing data attributes,.
      *
-     * @param int $value;
+     * @param int $value
      *
      * @return \Booli\Composer\Listings
      */

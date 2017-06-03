@@ -97,7 +97,7 @@ class Areas extends AbstractComposer
     /**
      * Only areas containing listings.
      *
-     * @param int|bool $value;
+     * @param int|bool $value
      *
      * @return \Booli\Composer\Areas
      */
@@ -111,7 +111,7 @@ class Areas extends AbstractComposer
     /**
      * Only areas containing sold objects.
      *
-     * @param int|bool $value;
+     * @param int|bool $value
      *
      * @return \Booli\Composer\Areas
      */
