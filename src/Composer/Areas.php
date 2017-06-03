@@ -65,8 +65,8 @@ class Areas extends AbstractComposer
      *
      * @see    \Booli\Composer\Areas::lng($x, $y)
      *
-     * @param int $x;
-     * @param int $y;
+     * @param int $x
+     * @param int $y
      *
      * @return \Booli\Composer\Areas
      */
@@ -82,8 +82,8 @@ class Areas extends AbstractComposer
      *
      * @see    \Booli\Composer\Areas::lat($x, $y)
      *
-     * @param int $x;
-     * @param int $y;
+     * @param int $x
+     * @param int $y
      *
      * @return \Booli\Composer\Areas
      */

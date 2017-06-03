@@ -86,8 +86,8 @@ class Listings extends AbstractComposer
      *
      * @see    \Booli\Composer\Listings::dim($x, $y)
      *
-     * @param int $x;
-     * @param int $y;
+     * @param int $x
+     * @param int $y
      *
      * @return \Booli\Composer\Listings
      */
@@ -104,8 +104,8 @@ class Listings extends AbstractComposer
      *
      * @see    \Booli\Composer\Listings::center($x, $y)
      *
-     * @param int $x;
-     * @param int $y;
+     * @param int $x
+     * @param int $y
      *
      * @return \Booli\Composer\Listings
      */

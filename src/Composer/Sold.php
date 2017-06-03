@@ -87,8 +87,8 @@ class Sold extends AbstractComposer
      *
      * @see    \Booli\Composer\Sold::dim($x, $y)
      *
-     * @param int $x;
-     * @param int $y;
+     * @param int $x
+     * @param int $y
      *
      * @return \Booli\Composer\Sold
      */
@@ -105,8 +105,8 @@ class Sold extends AbstractComposer
      *
      * @see    \Booli\Composer\Sold::center($x, $y)
      *
-     * @param int $x;
-     * @param int $y;
+     * @param int $x
+     * @param int $y
      *
      * @return \Booli\Composer\Sold
      */
