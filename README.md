@@ -2,7 +2,11 @@
 
 A lightweight object oriented wrapper for [Booli API v2](https://www.booli.se/api/).
 
-[![Build Status](https://travis-ci.org/freestream/Api_Booli_PHP.svg?branch=master)](https://travis-ci.org/freestream/Api_Booli_PHP)
+[![Software License][ico-license]](LICENSE.md)
+[![Build Status][ico-travis]][link-travis]
+[![Code Style][ico-cs]][link-cs]
+
+
 
 ## Features
 
@@ -43,7 +47,14 @@ If you have installed ```PHPUnit``` you can run the test cases from the terminal
 ```shell
 $ ./vendor/bin/phpunit
 ```
+
 ## License
 
-`Api_Booli_PHP` is licensed under the MIT License - see the LICENSE file for details
+The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
 
+[ico-license]: https://img.shields.io/badge/license-MIT-brightgreen.svg
+[ico-travis]: https://travis-ci.org/freestream/Api_Booli_PHP.svg?branch=master
+[ico-cs]: https://styleci.io/repos/92758166/shield?branch=master
+
+[link-travis]: https://travis-ci.org/freestream/Api_Booli_PHP
+[link-cs]: https://styleci.io/repos/92758166
