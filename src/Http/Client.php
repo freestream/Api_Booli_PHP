@@ -43,7 +43,7 @@ class Client
     /**
      * Initial configuration.
      *
-     * @param \Booli\Http\Adapter\AdapterInterface $adapter
+     * @param \Booli\Http\Adapter\AdapterInterface $httpAdapter
      */
     public function __construct(\Booli\Http\Adapter\AdapterInterface $httpAdapter)
     {
