@@ -63,6 +63,8 @@ class Client
     /**
      * Execute request.
      *
+     * @param string $url
+     *
      * @return string
      */
     public function execute($url)
