@@ -43,7 +43,7 @@ class HttpCurlErrorException extends \Exception
     /**
      * Any error code that was returned by CURL.
      *
-     * @var string
+     * @var int
      */
     private $error;
 
