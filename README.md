@@ -52,8 +52,9 @@ $ ./vendor/bin/phpunit
 
 The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
 
-[ico-license]: https://img.shields.io/badge/license-MIT-brightgreen.svg
-[ico-travis]: https://travis-ci.org/freestream/Api_Booli_PHP.svg?branch=master
+[ico-license]: https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square
+
+[ico-travis]: https://img.shields.io/travis/freestream/Api_Booli_PHP/master.svg?style=flat-square
 [ico-cs]: https://styleci.io/repos/92758166/shield?branch=master
 
 [link-travis]: https://travis-ci.org/freestream/Api_Booli_PHP
