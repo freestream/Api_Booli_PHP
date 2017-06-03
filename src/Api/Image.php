@@ -1,6 +1,6 @@
 <?php
 /**
- * The MIT License (MIT)
+ * The MIT License (MIT).
  *
  * Copyright (c) 2017 Anton Samuelsson
  *
@@ -43,9 +43,9 @@ class Image extends AbstractApi
     /**
      * Get single image data stream.
      *
-     * @param  integer $booliId
-     * @param  integer $width
-     * @param  integer $height
+     * @param int $booliId
+     * @param int $width
+     * @param int $height
      *
      * @throws InvalidArgumentException
      *
@@ -61,14 +61,13 @@ class Image extends AbstractApi
             throw new \InvalidArgumentException('Width and height have to be of type integer');
         }
 
-        $width  = (null != $width) ? $width : 140;
+        $width = (null != $width) ? $width : 140;
         $height = (null != $height) ? $height : 94;
 
-        $width  = min(140, max(0, $width));
+        $width = min(140, max(0, $width));
         $height = min(94, max(0, $height));
-        $url    = $this->baseUrl . '/' . "primary_{$booliId}_{$width}x{$height}.jpg";
+        $url = $this->baseUrl.'/'."primary_{$booliId}_{$width}x{$height}.jpg";
 
         return $this->executeResource($url);
     }
 }
-

@@ -1,6 +1,6 @@
 <?php
 /**
- * The MIT License (MIT)
+ * The MIT License (MIT).
  *
  * Copyright (c) 2017 Anton Samuelsson
  *
@@ -50,15 +50,15 @@ class HttpCurlErrorException extends \Exception
     /**
      * Initial configuration.
      *
-     * @param string  $message
-     * @param string  $url
-     * @param integer $error
+     * @param string $message
+     * @param string $url
+     * @param int    $error
      */
     public function __construct($message, $url, $error)
     {
         parent::__construct($message);
 
-        $this->url   = $url;
+        $this->url = $url;
         $this->error = $error;
     }
 
@@ -172,4 +172,3 @@ class HttpCurlErrorException extends \Exception
         return (isset($errorCodes[$this->error])) ? $errorCodes[$this->error] : '';
     }
 }
-

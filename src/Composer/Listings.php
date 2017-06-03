@@ -1,6 +1,6 @@
 <?php
 /**
- * The MIT License (MIT)
+ * The MIT License (MIT).
  *
  * Copyright (c) 2017 Anton Samuelsson
  *
@@ -70,7 +70,7 @@ class Listings extends AbstractComposer
     /**
      * Search query.
      *
-     * @param  string $value
+     * @param string $value
      *
      * @return \Booli\Composer\Listings
      */
@@ -86,8 +86,8 @@ class Listings extends AbstractComposer
      *
      * @see    \Booli\Composer\Listings::dim($x, $y)
      *
-     * @param  integer $x;
-     * @param  integer $y;
+     * @param int $x;
+     * @param int $y;
      *
      * @return \Booli\Composer\Listings
      */
@@ -104,8 +104,8 @@ class Listings extends AbstractComposer
      *
      * @see    \Booli\Composer\Listings::center($x, $y)
      *
-     * @param  integer $x;
-     * @param  integer $y;
+     * @param int $x;
+     * @param int $y;
      *
      * @return \Booli\Composer\Listings
      */
@@ -128,7 +128,7 @@ class Listings extends AbstractComposer
     public function bbox(...$params)
     {
         if (4 !== count($params)) {
-            $prams = array_slice(array_chunk(array_pad($params, 8, null), 2), 0 , 4);
+            $prams = array_slice(array_chunk(array_pad($params, 8, null), 2), 0, 4);
         }
 
         foreach ($params as &$param) {
@@ -144,7 +144,7 @@ class Listings extends AbstractComposer
     /**
      * Area IDs.
      *
-     * @param  array|integer $value;
+     * @param array|int $value;
      *
      * @return \Booli\Composer\Listings
      */
@@ -158,7 +158,7 @@ class Listings extends AbstractComposer
     /**
      * Minimum listing price.
      *
-     * @param  integer $value;
+     * @param int $value;
      *
      * @return \Booli\Composer\Listings
      */
@@ -172,7 +172,7 @@ class Listings extends AbstractComposer
     /**
      * Maximum listing price.
      *
-     * @param  integer $value;
+     * @param int $value;
      *
      * @return \Booli\Composer\Listings
      */
@@ -186,7 +186,7 @@ class Listings extends AbstractComposer
     /**
      * Minimum price per square meter.
      *
-     * @param  integer $value;
+     * @param int $value;
      *
      * @return \Booli\Composer\Listings
      */
@@ -200,7 +200,7 @@ class Listings extends AbstractComposer
     /**
      * Maximum price per square meter.
      *
-     * @param  integer $value;
+     * @param int $value;
      *
      * @return \Booli\Composer\Listings
      */
@@ -214,7 +214,7 @@ class Listings extends AbstractComposer
     /**
      * Minimum amount of rooms.
      *
-     * @param  integer $value;
+     * @param int $value;
      *
      * @return \Booli\Composer\Listings
      */
@@ -228,7 +228,7 @@ class Listings extends AbstractComposer
     /**
      * Maximum amount of rooms.
      *
-     * @param  integer $value;
+     * @param int $value;
      *
      * @return \Booli\Composer\Listings
      */
@@ -242,7 +242,7 @@ class Listings extends AbstractComposer
     /**
      * Maximum rent.
      *
-     * @param  integer $value;
+     * @param int $value;
      *
      * @return \Booli\Composer\Listings
      */
@@ -256,7 +256,7 @@ class Listings extends AbstractComposer
     /**
      * Minimum living area.
      *
-     * @param  integer $value;
+     * @param int $value;
      *
      * @return \Booli\Composer\Listings
      */
@@ -270,7 +270,7 @@ class Listings extends AbstractComposer
     /**
      * Maximum living area.
      *
-     * @param  integer $value;
+     * @param int $value;
      *
      * @return \Booli\Composer\Listings
      */
@@ -284,7 +284,7 @@ class Listings extends AbstractComposer
     /**
      * Minimum plot area.
      *
-     * @param  integer $value;
+     * @param int $value;
      *
      * @return \Booli\Composer\Listings
      */
@@ -298,7 +298,7 @@ class Listings extends AbstractComposer
     /**
      * Maximum plot area.
      *
-     * @param  integer $value;
+     * @param int $value;
      *
      * @return \Booli\Composer\Listings
      */
@@ -312,7 +312,7 @@ class Listings extends AbstractComposer
     /**
      * Property type.
      *
-     * @param  string|array $value;
+     * @param string|array $value;
      *
      * @return \Booli\Composer\Listings
      */
@@ -326,7 +326,7 @@ class Listings extends AbstractComposer
     /**
      * Minimum year of construction.
      *
-     * @param  integer $value;
+     * @param int $value;
      *
      * @return \Booli\Composer\Listings
      */
@@ -340,7 +340,7 @@ class Listings extends AbstractComposer
     /**
      * Maximum year of construction.
      *
-     * @param  integer $value;
+     * @param int $value;
      *
      * @return \Booli\Composer\Listings
      */
@@ -354,7 +354,7 @@ class Listings extends AbstractComposer
     /**
      * Earliest date the object was published.
      *
-     * @param  \DateTime $date;
+     * @param \DateTime $date;
      *
      * @return \Booli\Composer\Listings
      */
@@ -368,7 +368,7 @@ class Listings extends AbstractComposer
     /**
      * The last date the object was published.
      *
-     * @param  \DateTime $date;
+     * @param \DateTime $date;
      *
      * @return \Booli\Composer\Listings
      */
@@ -382,13 +382,13 @@ class Listings extends AbstractComposer
     /**
      * Only listings with decreased price.
      *
-     * @param  integer $value;
+     * @param int $value;
      *
      * @return \Booli\Composer\Listings
      */
     public function priceDecrease($value)
     {
-        $this->_defaults['priceDecrease'] = (int) (boolean) $value;
+        $this->_defaults['priceDecrease'] = (int) (bool) $value;
 
         return $this;
     }
@@ -396,29 +396,28 @@ class Listings extends AbstractComposer
     /**
      * Show only new production or exclude listings.
      *
-     * @param  integer $value;
+     * @param int $value;
      *
      * @return \Booli\Composer\Listings
      */
     public function isNewConstruction($value)
     {
-        $this->_defaults['isNewConstruction'] = (int) (boolean) $value;
+        $this->_defaults['isNewConstruction'] = (int) (bool) $value;
 
         return $this;
     }
 
     /**
-     * Include listings with missing data attributes,
+     * Include listings with missing data attributes,.
      *
-     * @param  integer $value;
+     * @param int $value;
      *
      * @return \Booli\Composer\Listings
      */
     public function includeUnset($value)
     {
-        $this->_defaults['includeUnset'] = (int) (boolean) $value;
+        $this->_defaults['includeUnset'] = (int) (bool) $value;
 
         return $this;
     }
 }
-

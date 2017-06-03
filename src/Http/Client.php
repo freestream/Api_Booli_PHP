@@ -1,6 +1,6 @@
 <?php
 /**
- * The MIT License (MIT)
+ * The MIT License (MIT).
  *
  * Copyright (c) 2017 Anton Samuelsson
  *
@@ -47,7 +47,7 @@ class Client
      */
     public function __construct(\Booli\Http\Adapter\AdapterInterface $httpAdapter)
     {
-        $this->httpAdapter  = $httpAdapter;
+        $this->httpAdapter = $httpAdapter;
     }
 
     /**
@@ -70,4 +70,3 @@ class Client
         return $this->httpAdapter->execute($url);
     }
 }
-

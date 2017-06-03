@@ -1,6 +1,6 @@
 <?php
 /**
- * The MIT License (MIT)
+ * The MIT License (MIT).
  *
  * Copyright (c) 2017 Anton Samuelsson
  *
@@ -48,7 +48,7 @@ class HttpBadResponseException extends \Exception
     private $httpCode;
 
     /**
-     * Any response data that was returned by the server
+     * Any response data that was returned by the server.
      *
      * @var string
      */
@@ -66,7 +66,7 @@ class HttpBadResponseException extends \Exception
     {
         parent::__construct($message);
 
-        $this->url      = $url;
+        $this->url = $url;
         $this->httpCode = $httpCode;
         $this->response = $response;
     }
@@ -101,4 +101,3 @@ class HttpBadResponseException extends \Exception
         return $this->response;
     }
 }
-

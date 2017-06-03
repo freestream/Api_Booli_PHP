@@ -1,6 +1,6 @@
 <?php
 /**
- * The MIT License (MIT)
+ * The MIT License (MIT).
  *
  * Copyright (c) 2017 Anton Samuelsson
  *
@@ -43,9 +43,9 @@ class Sold extends AbstractApi
     /**
      * Get sold objects.
      *
-     * @param  \Booli\Composer\Sold $composer
-     * @param  integer              $size
-     * @param  integer              $page
+     * @param \Booli\Composer\Sold $composer
+     * @param int                  $size
+     * @param int                  $page
      *
      * @throws InvalidArgumentException
      *
@@ -57,13 +57,13 @@ class Sold extends AbstractApi
             throw new \InvalidArgumentException('Page and size have to be of type integer');
         }
 
-        $page       = max(0, $page);
-        $limit      = min(500, max(0, $size));
+        $page = max(0, $page);
+        $limit = min(500, max(0, $size));
 
-        $composer   = (null == $composer) ? [] : $composer->asArray();
-        $filter     = array_replace($composer, [
+        $composer = (null == $composer) ? [] : $composer->asArray();
+        $filter = array_replace($composer, [
             'limit'     => $limit,
-            'offset'    => $page*$limit,
+            'offset'    => $page * $limit,
         ]);
 
         return $this->execute($this->baseUrl, $filter);
@@ -72,13 +72,12 @@ class Sold extends AbstractApi
     /**
      * Get single sold object.
      *
-     * @param  integer $id
+     * @param int $id
      *
      * @return array
      */
     public function get($id)
     {
-        return $this->execute($this->baseUrl . '/' . $id);
+        return $this->execute($this->baseUrl.'/'.$id);
     }
 }
-

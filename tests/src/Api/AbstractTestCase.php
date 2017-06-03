@@ -1,6 +1,6 @@
 <?php
 /**
- * The MIT License (MIT)
+ * The MIT License (MIT).
  *
  * Copyright (c) 2017 Anton Samuelsson
  *
@@ -50,7 +50,7 @@ abstract class AbstractTestCase extends \PHPUnit\Framework\TestCase
      */
     protected function getApiMock()
     {
-        $auth   = new Authenticate('abc', '123');
+        $auth = new Authenticate('abc', '123');
         $client = new Client($auth);
 
         $adapter = $this->getMockBuilder(\Booli\Http\Adapter\CurlAdapter::class)
@@ -74,4 +74,3 @@ abstract class AbstractTestCase extends \PHPUnit\Framework\TestCase
             ->getMock();
     }
 }
-

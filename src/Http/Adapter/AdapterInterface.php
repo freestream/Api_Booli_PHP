@@ -1,6 +1,6 @@
 <?php
 /**
- * The MIT License (MIT)
+ * The MIT License (MIT).
  *
  * Copyright (c) 2017 Anton Samuelsson
  *
@@ -40,4 +40,3 @@ interface AdapterInterface
      */
     public function execute($url);
 }
-

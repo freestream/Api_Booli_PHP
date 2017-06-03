@@ -1,6 +1,6 @@
 <?php
 /**
- * The MIT License (MIT)
+ * The MIT License (MIT).
  *
  * Copyright (c) 2017 Anton Samuelsson
  *
@@ -52,7 +52,7 @@ class ClientTest extends TestCase
      */
     public function shouldAuthenticate()
     {
-        $auth   = new Authenticate('abc', '123');
+        $auth = new Authenticate('abc', '123');
         $client = new Client($auth);
 
         $this->assertInstanceOf(\Booli\Http\Authenticate::class, $client->getAuthentication());
@@ -123,4 +123,3 @@ class ClientTest extends TestCase
         $client->doNotExist();
     }
 }
-

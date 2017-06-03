@@ -1,6 +1,6 @@
 <?php
 /**
- * The MIT License (MIT)
+ * The MIT License (MIT).
  *
  * Copyright (c) 2017 Anton Samuelsson
  *
@@ -26,7 +26,6 @@
 <?php
 namespace Booli\Tests\Api;
 
-use Booli\Client;
 use Booli\Composer\Areas as Composer;
 
 /**
@@ -41,7 +40,7 @@ class AreasTest extends AbstractTestCase
      */
     public function shouldGetAll()
     {
-        $composer = new Composer;
+        $composer = new Composer();
         $expected = array_replace($composer->asArray(), [
             'limit' => null,
         ]);
@@ -60,7 +59,7 @@ class AreasTest extends AbstractTestCase
      */
     public function shouldGetLimted()
     {
-        $composer = new Composer;
+        $composer = new Composer();
         $expected = array_replace($composer->asArray(), [
             'limit' => 100,
         ]);
@@ -80,10 +79,10 @@ class AreasTest extends AbstractTestCase
      */
     public function shouldThrowExceptionWidthNonIntParam()
     {
-        $composer = new Composer;
+        $composer = new Composer();
 
         $api = $this->getApiMock();
-        $api->all($composer, new \stdClass);
+        $api->all($composer, new \stdClass());
     }
 
     /**
@@ -96,4 +95,3 @@ class AreasTest extends AbstractTestCase
         return \Booli\Api\Areas::class;
     }
 }
-

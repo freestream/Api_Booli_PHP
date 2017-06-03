@@ -1,6 +1,6 @@
 <?php
 /**
- * The MIT License (MIT)
+ * The MIT License (MIT).
  *
  * Copyright (c) 2017 Anton Samuelsson
  *
@@ -26,9 +26,9 @@
 <?php
 namespace Booli;
 
-use Booli\Http\Client as HttpClient;
 use Booli\Http\Adapter\CurlAdapter;
 use Booli\Http\Authenticate;
+use Booli\Http\Client as HttpClient;
 
 /**
  * Booli API client.
@@ -59,8 +59,8 @@ class Client
      */
     public function __construct(Authenticate $auth = null, HttpClient $httpClient = null)
     {
-        $this->httpClient   = $httpClient ?: new HttpClient(new CurlAdapter());
-        $this->auth         = $auth;
+        $this->httpClient = $httpClient ?: new HttpClient(new CurlAdapter());
+        $this->auth = $auth;
     }
 
     /**
@@ -82,7 +82,7 @@ class Client
     /**
      * Get API resource.
      *
-     * @param  string $name
+     * @param string $name
      *
      * @throws InvalidArgumentException
      *
@@ -113,8 +113,8 @@ class Client
     /**
      * Magic method for selecting API resource.
      *
-     * @param  string $name
-     * @param  array  $args
+     * @param string $name
+     * @param array  $args
      *
      * @throws \BadMethodCallException
      *
@@ -139,4 +139,3 @@ class Client
         return $this->httpClient;
     }
 }
-

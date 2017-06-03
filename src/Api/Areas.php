@@ -1,6 +1,6 @@
 <?php
 /**
- * The MIT License (MIT)
+ * The MIT License (MIT).
  *
  * Copyright (c) 2017 Anton Samuelsson
  *
@@ -43,8 +43,8 @@ class Areas extends AbstractApi
     /**
      * Get all areas.
      *
-     * @param  \Booli\Composer\Areas $composer
-     * @param  integer               $limit
+     * @param \Booli\Composer\Areas $composer
+     * @param int                   $limit
      *
      * @throws InvalidArgumentException
      *
@@ -56,12 +56,11 @@ class Areas extends AbstractApi
             throw new \InvalidArgumentException('Limit have to be of type integer');
         }
 
-        $composer   = (null == $composer) ? [] : $composer->asArray();
-        $filter     = array_replace($composer, [
+        $composer = (null == $composer) ? [] : $composer->asArray();
+        $filter = array_replace($composer, [
             'limit' => $limit,
         ]);
 
         return $this->execute($this->baseUrl, $filter);
     }
 }
-

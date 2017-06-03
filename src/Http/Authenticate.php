@@ -1,6 +1,6 @@
 <?php
 /**
- * The MIT License (MIT)
+ * The MIT License (MIT).
  *
  * Copyright (c) 2017 Anton Samuelsson
  *
@@ -56,7 +56,7 @@ class Authenticate
     public function __construct($callerId, $key)
     {
         $this->callerId = $callerId;
-        $this->key      = $key;
+        $this->key = $key;
     }
 
     /**
@@ -79,4 +79,3 @@ class Authenticate
         return $this->callerId;
     }
 }
-
