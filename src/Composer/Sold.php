@@ -129,7 +129,7 @@ class Sold extends AbstractComposer
     public function bbox(...$params)
     {
         if (4 !== count($params)) {
-            $prams = array_slice(array_chunk(array_pad($params, 8, null), 2), 0, 4);
+            $params = array_slice(array_chunk(array_pad($params, 8, null), 2), 0, 4);
         }
 
         foreach ($params as &$param) {
