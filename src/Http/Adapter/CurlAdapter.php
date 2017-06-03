@@ -1,6 +1,6 @@
 <?php
 /**
- * The MIT License (MIT)
+ * The MIT License (MIT).
  *
  * Copyright (c) 2017 Anton Samuelsson
  *
@@ -26,8 +26,8 @@
 <?php
 namespace Booli\Http\Adapter;
 
-use Booli\Exception\HttpCurlErrorException;
 use Booli\Exception\HttpBadResponseException;
+use Booli\Exception\HttpCurlErrorException;
 
 /**
  * Booli API HTTP client.
@@ -65,4 +65,3 @@ class CurlAdapter implements AdapterInterface
         return $response;
     }
 }
-

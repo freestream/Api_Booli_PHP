@@ -1,6 +1,6 @@
 <?php
 /**
- * The MIT License (MIT)
+ * The MIT License (MIT).
  *
  * Copyright (c) 2017 Anton Samuelsson
  *
@@ -49,7 +49,7 @@ class Areas extends AbstractComposer
     /**
      * Search query.
      *
-     * @param  string $value
+     * @param string $value
      *
      * @return \Booli\Composer\Areas
      */
@@ -65,8 +65,8 @@ class Areas extends AbstractComposer
      *
      * @see    \Booli\Composer\Areas::lng($x, $y)
      *
-     * @param  integer $x;
-     * @param  integer $y;
+     * @param int $x;
+     * @param int $y;
      *
      * @return \Booli\Composer\Areas
      */
@@ -82,8 +82,8 @@ class Areas extends AbstractComposer
      *
      * @see    \Booli\Composer\Areas::lat($x, $y)
      *
-     * @param  integer $x;
-     * @param  integer $y;
+     * @param int $x;
+     * @param int $y;
      *
      * @return \Booli\Composer\Areas
      */
@@ -97,13 +97,13 @@ class Areas extends AbstractComposer
     /**
      * Only areas containing listings.
      *
-     * @param  integer|boolean $value;
+     * @param int|bool $value;
      *
      * @return \Booli\Composer\Areas
      */
     public function listings($value)
     {
-        $this->_defaults['listings'] = (int) (boolean) $value;
+        $this->_defaults['listings'] = (int) (bool) $value;
 
         return $this;
     }
@@ -111,15 +111,14 @@ class Areas extends AbstractComposer
     /**
      * Only areas containing sold objects.
      *
-     * @param  integer|boolean $value;
+     * @param int|bool $value;
      *
      * @return \Booli\Composer\Areas
      */
     public function transactions($value)
     {
-        $this->_defaults['transactions'] = (int) (boolean) $value;
+        $this->_defaults['transactions'] = (int) (bool) $value;
 
         return $this;
     }
 }
-

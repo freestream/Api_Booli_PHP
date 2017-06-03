@@ -1,6 +1,6 @@
 <?php
 /**
- * The MIT License (MIT)
+ * The MIT License (MIT).
  *
  * Copyright (c) 2017 Anton Samuelsson
  *
@@ -71,7 +71,7 @@ class Sold extends AbstractComposer
     /**
      * Search query.
      *
-     * @param  string $value
+     * @param string $value
      *
      * @return \Booli\Composer\Sold
      */
@@ -87,8 +87,8 @@ class Sold extends AbstractComposer
      *
      * @see    \Booli\Composer\Sold::dim($x, $y)
      *
-     * @param  integer $x;
-     * @param  integer $y;
+     * @param int $x;
+     * @param int $y;
      *
      * @return \Booli\Composer\Sold
      */
@@ -105,8 +105,8 @@ class Sold extends AbstractComposer
      *
      * @see    \Booli\Composer\Sold::center($x, $y)
      *
-     * @param  integer $x;
-     * @param  integer $y;
+     * @param int $x;
+     * @param int $y;
      *
      * @return \Booli\Composer\Sold
      */
@@ -129,7 +129,7 @@ class Sold extends AbstractComposer
     public function bbox(...$params)
     {
         if (4 !== count($params)) {
-            $prams = array_slice(array_chunk(array_pad($params, 8, null), 2), 0 , 4);
+            $prams = array_slice(array_chunk(array_pad($params, 8, null), 2), 0, 4);
         }
 
         foreach ($params as &$param) {
@@ -145,7 +145,7 @@ class Sold extends AbstractComposer
     /**
      * Area IDs.
      *
-     * @param  array|integer $value;
+     * @param array|int $value;
      *
      * @return \Booli\Composer\Sold
      */
@@ -159,7 +159,7 @@ class Sold extends AbstractComposer
     /**
      * Minimum listing price.
      *
-     * @param  integer $value;
+     * @param int $value;
      *
      * @return \Booli\Composer\Sold
      */
@@ -173,7 +173,7 @@ class Sold extends AbstractComposer
     /**
      * Maximum listing price.
      *
-     * @param  integer $value;
+     * @param int $value;
      *
      * @return \Booli\Composer\Sold
      */
@@ -187,7 +187,7 @@ class Sold extends AbstractComposer
     /**
      * Minimum price per square meter.
      *
-     * @param  integer $value;
+     * @param int $value;
      *
      * @return \Booli\Composer\Sold
      */
@@ -201,7 +201,7 @@ class Sold extends AbstractComposer
     /**
      * Maximum price per square meter.
      *
-     * @param  integer $value;
+     * @param int $value;
      *
      * @return \Booli\Composer\Sold
      */
@@ -215,7 +215,7 @@ class Sold extends AbstractComposer
     /**
      * Minimum amount of rooms.
      *
-     * @param  integer $value;
+     * @param int $value;
      *
      * @return \Booli\Composer\Sold
      */
@@ -229,7 +229,7 @@ class Sold extends AbstractComposer
     /**
      * Maximum amount of rooms.
      *
-     * @param  integer $value;
+     * @param int $value;
      *
      * @return \Booli\Composer\Sold
      */
@@ -243,7 +243,7 @@ class Sold extends AbstractComposer
     /**
      * Maximum rent.
      *
-     * @param  integer $value;
+     * @param int $value;
      *
      * @return \Booli\Composer\Sold
      */
@@ -257,7 +257,7 @@ class Sold extends AbstractComposer
     /**
      * Minimum living area.
      *
-     * @param  integer $value;
+     * @param int $value;
      *
      * @return \Booli\Composer\Sold
      */
@@ -271,7 +271,7 @@ class Sold extends AbstractComposer
     /**
      * Maximum living area.
      *
-     * @param  integer $value;
+     * @param int $value;
      *
      * @return \Booli\Composer\Sold
      */
@@ -285,7 +285,7 @@ class Sold extends AbstractComposer
     /**
      * Minimum plot area.
      *
-     * @param  integer $value;
+     * @param int $value;
      *
      * @return \Booli\Composer\Sold
      */
@@ -299,7 +299,7 @@ class Sold extends AbstractComposer
     /**
      * Maximum plot area.
      *
-     * @param  integer $value;
+     * @param int $value;
      *
      * @return \Booli\Composer\Sold
      */
@@ -313,7 +313,7 @@ class Sold extends AbstractComposer
     /**
      * Property type.
      *
-     * @param  string|array $value;
+     * @param string|array $value;
      *
      * @return \Booli\Composer\Sold
      */
@@ -327,7 +327,7 @@ class Sold extends AbstractComposer
     /**
      * Minimum year of construction.
      *
-     * @param  integer $value;
+     * @param int $value;
      *
      * @return \Booli\Composer\Sold
      */
@@ -341,7 +341,7 @@ class Sold extends AbstractComposer
     /**
      * Maximum year of construction.
      *
-     * @param  integer $value;
+     * @param int $value;
      *
      * @return \Booli\Composer\Sold
      */
@@ -355,7 +355,7 @@ class Sold extends AbstractComposer
     /**
      * Earliest date the ad was published.
      *
-     * @param  \DateTime $date;
+     * @param \DateTime $date;
      *
      * @return \Booli\Composer\Sold
      */
@@ -369,7 +369,7 @@ class Sold extends AbstractComposer
     /**
      * The last date the object was published.
      *
-     * @param  \DateTime $date;
+     * @param \DateTime $date;
      *
      * @return \Booli\Composer\Sold
      */
@@ -383,7 +383,7 @@ class Sold extends AbstractComposer
     /**
      * Earliest date the object was sold.
      *
-     * @param  \DateTime $date;
+     * @param \DateTime $date;
      *
      * @return \Booli\Composer\Sold
      */
@@ -397,7 +397,7 @@ class Sold extends AbstractComposer
     /**
      * The last date the object was sold.
      *
-     * @param  \DateTime $date;
+     * @param \DateTime $date;
      *
      * @return \Booli\Composer\Sold
      */
@@ -411,30 +411,28 @@ class Sold extends AbstractComposer
     /**
      * Show only new production or exclude listings.
      *
-     * @param  integer|boolean $value;
+     * @param int|bool $value;
      *
      * @return \Booli\Composer\Sold
      */
     public function isNewConstruction($value)
     {
-        $this->_defaults['isNewConstruction'] = (int) (boolean) $value;
+        $this->_defaults['isNewConstruction'] = (int) (bool) $value;
 
         return $this;
     }
 
     /**
-     * Include listings with missing data attributes,
+     * Include listings with missing data attributes,.
      *
-     * @param  integer|boolean $value;
+     * @param int|bool $value;
      *
      * @return \Booli\Composer\Sold
      */
     public function includeUnset($value)
     {
-        $this->_defaults['includeUnset'] = (int) (boolean) $value;
+        $this->_defaults['includeUnset'] = (int) (bool) $value;
 
         return $this;
     }
 }
-
-

@@ -1,6 +1,6 @@
 <?php
 /**
- * The MIT License (MIT)
+ * The MIT License (MIT).
  *
  * Copyright (c) 2017 Anton Samuelsson
  *
@@ -26,7 +26,6 @@
 <?php
 namespace Booli\Tests\Api;
 
-use Booli\Client;
 use Booli\Composer\Sold as Composer;
 
 /**
@@ -41,7 +40,7 @@ class SoldTest extends AbstractTestCase
      */
     public function shouldGetAll()
     {
-        $composer = new Composer;
+        $composer = new Composer();
         $expected = array_replace($composer->asArray(), [
             'limit'     => 100,
             'offset'    => 0,
@@ -61,10 +60,10 @@ class SoldTest extends AbstractTestCase
      */
     public function shouldGetLimted()
     {
-        $composer = new Composer;
+        $composer = new Composer();
         $expected = array_replace($composer->asArray(), [
             'limit'     => 200,
-            'offset'    => 200*2,
+            'offset'    => 200 * 2,
         ]);
 
         $api = $this->getApiMock();
@@ -81,12 +80,12 @@ class SoldTest extends AbstractTestCase
      */
     public function shouldGetOne()
     {
-        $id     = 123;
-        $api    = $this->getApiMock();
+        $id = 123;
+        $api = $this->getApiMock();
 
         $api->expects($this->once())
             ->method('execute')
-            ->with($api->baseUrl . '/' . $id);
+            ->with($api->baseUrl.'/'.$id);
 
         $api->get($id);
     }
@@ -97,10 +96,10 @@ class SoldTest extends AbstractTestCase
      */
     public function shouldThrowExceptionWidthNonIntParam()
     {
-        $composer = new Composer;
+        $composer = new Composer();
 
         $api = $this->getApiMock();
-        $api->all($composer, new \stdClass, new \stdClass);
+        $api->all($composer, new \stdClass(), new \stdClass());
     }
 
     /**
@@ -113,4 +112,3 @@ class SoldTest extends AbstractTestCase
         return \Booli\Api\Sold::class;
     }
 }
-

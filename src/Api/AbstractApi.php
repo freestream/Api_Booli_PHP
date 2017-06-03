@@ -1,6 +1,6 @@
 <?php
 /**
- * The MIT License (MIT)
+ * The MIT License (MIT).
  *
  * Copyright (c) 2017 Anton Samuelsson
  *
@@ -53,8 +53,8 @@ abstract class AbstractApi
     /**
      * GET method.
      *
-     * @param  string $baseUrl
-     * @param  array  $params
+     * @param string $baseUrl
+     * @param array  $params
      *
      * @throws HttpTokenInvalidParamsException
      *
@@ -62,21 +62,21 @@ abstract class AbstractApi
      */
     public function execute($baseUrl, array $params = [])
     {
-        $auth       = $this->client->getAuthentication();
-        $time       = time();
-        $callerId   = $auth->getCallerId();
-        $key        = $auth->getKey();
-        $randomStr  = \Booli\Helper\Data::randomStr(16);
+        $auth = $this->client->getAuthentication();
+        $time = time();
+        $callerId = $auth->getCallerId();
+        $key = $auth->getKey();
+        $randomStr = \Booli\Helper\Data::randomStr(16);
 
         $params = array_replace($params, [
             'callerId'  => $callerId,
             'time'      => $time,
             'unique'    => $randomStr,
-            'hash'      => hash('sha1', $callerId . $time . $key . $randomStr),
+            'hash'      => hash('sha1', $callerId.$time.$key.$randomStr),
         ]);
 
-        $url        = \Booli\Helper\Data::getUrl($baseUrl, $params);
-        $response   = $this->client->getHttpClient()->execute($url);
+        $url = \Booli\Helper\Data::getUrl($baseUrl, $params);
+        $response = $this->client->getHttpClient()->execute($url);
 
         if (!\Booli\Helper\Data::isJson($response)) {
             throw new \UnexpectedValueException('Unexpected result');
@@ -88,7 +88,7 @@ abstract class AbstractApi
     /**
      * GET resource method.
      *
-     * @param  string $url
+     * @param string $url
      *
      * @throws HttpTokenInvalidParamsException
      *
@@ -99,4 +99,3 @@ abstract class AbstractApi
         return $this->client->getHttpClient()->execute($url);
     }
 }
-

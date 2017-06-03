@@ -1,6 +1,6 @@
 <?php
 /**
- * The MIT License (MIT)
+ * The MIT License (MIT).
  *
  * Copyright (c) 2017 Anton Samuelsson
  *
@@ -25,8 +25,6 @@
 ?>
 <?php
 namespace Booli\Tests\Api;
-
-use Booli\Client;
 
 /**
  * Booli API.
@@ -60,12 +58,12 @@ class ImageTest extends AbstractTestCase
         $api = $this->getApiMock();
 
         return [
-            [null, null, $api->baseUrl . '/' . 'primary_1234_140x94.jpg'],
-            [100, 90, $api->baseUrl . '/' . 'primary_1234_100x90.jpg'],
-            [200, 200, $api->baseUrl . '/' . 'primary_1234_140x94.jpg'],
-            [null, 100, $api->baseUrl . '/' . 'primary_1234_140x94.jpg'],
-            [140, 100, $api->baseUrl . '/' . 'primary_1234_140x94.jpg'],
-            [200, null, $api->baseUrl . '/' . 'primary_1234_140x94.jpg'],
+            [null, null, $api->baseUrl.'/'.'primary_1234_140x94.jpg'],
+            [100, 90, $api->baseUrl.'/'.'primary_1234_100x90.jpg'],
+            [200, 200, $api->baseUrl.'/'.'primary_1234_140x94.jpg'],
+            [null, 100, $api->baseUrl.'/'.'primary_1234_140x94.jpg'],
+            [140, 100, $api->baseUrl.'/'.'primary_1234_140x94.jpg'],
+            [200, null, $api->baseUrl.'/'.'primary_1234_140x94.jpg'],
         ];
     }
 
@@ -76,7 +74,7 @@ class ImageTest extends AbstractTestCase
     public function shouldThrowExceptionWidthNonIntBooliId()
     {
         $api = $this->getApiMock();
-        $api->get("1234");
+        $api->get('1234');
     }
 
     /**
@@ -86,7 +84,7 @@ class ImageTest extends AbstractTestCase
     public function shouldThrowExceptionWidthNonIntParam()
     {
         $api = $this->getApiMock();
-        $api->get(1234, new \stdClass);
+        $api->get(1234, new \stdClass());
     }
 
     /**
@@ -99,4 +97,3 @@ class ImageTest extends AbstractTestCase
         return \Booli\Api\Image::class;
     }
 }
-
