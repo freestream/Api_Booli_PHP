@@ -56,7 +56,7 @@ abstract class AbstractApi
      * @param string $baseUrl
      * @param array  $params
      *
-     * @throws HttpTokenInvalidParamsException
+     * @throws UnexpectedValueException
      *
      * @return array
      */
@@ -89,8 +89,6 @@ abstract class AbstractApi
      * GET resource method.
      *
      * @param string $url
-     *
-     * @throws HttpTokenInvalidParamsException
      *
      * @return string
      */
